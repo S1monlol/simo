@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/node-useragent_parser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/os-gui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/css/os-gui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/os-gui" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,27 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "home website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "S1mon",
+  "license": "ISC",
+  "dependencies": {
+    "discord-webhook-node": "^1.1.8",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "ipinfo": "^1.5.1",
+    "jQuery": "^1.7.4",
+    "nocache": "^3.0.3",
+    "node-fetch": "^3.2.3",
+    "os-gui": "^0.6.0",
+    "path": "^0.12.7",
+    "prettyjson": "^1.2.5",
+    "ua-parser-js": "^1.0.2",
+    "useragent": "^2.3.0"
+  }
+}
