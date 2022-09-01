@@ -24,6 +24,15 @@ async function welcome(){
                 shortcut: "pillow.ninja",
                 description: "My frontend for a web proxy called ultraviolet",
             },
+            {
+                item: "&Imdb but based",
+                action: () => {
+                    // redirect to pillow.ninja
+                    window.location.href = "https://imdb.simon.lgbt";
+                },
+                shortcut: "imdb.simon.lgbt",
+                description: "Another simplified imdb frontend",
+            },
 
         ],
         "&Me": [
@@ -48,7 +57,7 @@ async function welcome(){
                                 maximizeButton: false,
                                 minimizeButton: false
                             });
-                            $w.$content.html("<p>Abi-bot is a discord bot that gets information from the game <a href='https://store.steampowered.com/app/1306570/Fadeout_Underground/'>\"Fadeout Underground\"</a> </p> <img style='width: 500px' src='/public/image/abi.jpg'> <p>It was made in python and discord.py</p>");
+                            $w.$content.html("<p>Abi-bot is a discord bot that gets information from the game <a href='https://store.steampowered.com/app/1306570/Fadeout_Underground/'>\"Fadeout Underground\"</a> </p> <img style='width: 500px' src='/image/abi.jpg'> <p>It was made in python and discord.py</p>");
                             $w.$Button("OK", () => $w.close()).focus().css({width: 100});
                         },
                         description: "Abi-bot"
@@ -62,7 +71,7 @@ async function welcome(){
                                 maximizeButton: false,
                                 minimizeButton: false
                             });
-                            $w.$content.html("<p>A client hired me to make a bunch of crypto-tracking bots for personal use</p> <img style='width: 200px' src='/public/image/crypto1.jpg'> <img style='width: 200px' src='/public/image/crypto2.jpg'> <img style='width: 200px' src='/public/image/crypto3.jpg'> <p>I made them in python and discord.py</p>");
+                            $w.$content.html("<p>A client hired me to make a bunch of crypto-tracking bots for personal use</p> <img style='width: 200px' src='/image/crypto1.jpg'> <img style='width: 200px' src='/image/crypto2.jpg'> <img style='width: 200px' src='/image/crypto3.jpg'> <p>I made them in python and discord.py</p>");
                             $w.$Button("OK", () => $w.close()).focus().css({width: 100});
                         },
                         description: "Crypto Bots"
@@ -74,50 +83,7 @@ async function welcome(){
             }
         ],
 
-        "&Fun": [
-            {
-                item: "&Nothingness",
-                checkbox: {
-                    check: () => nothingness_state,
-                    toggle: () => {
-                        nothingness_state = !nothingness_state;
-                    }
-                },
-                description: "Tick a meaningless checkbox.",
-            },
-            {
-                item: "&Physics",
-                submenu: [
-                    {
-                        item: "&Schrödinger's Checkbox",
-                        checkbox: {
-                            check: () => {
-                                // this.cat_is_alive = this.cat_is_alive ?? Math.random() > 0.5;
-                                // return this.cat_is_alive;
-                                return Math.random() > 0.5;
-                            }
-                        },
-                        description: "The checked state is indeterminate until observed.",
-                    },
-                ],
-                description: "Contains a stupid physics joke.",
-            },
-            {
-                item: "&Many Items",
-                submenu: new Array(100).fill(0).map((_, i) => ({
-                    item: `Item ${i}`,
-                    checkbox: {
-                        check: function () {
-                            this.pointless_checkbox_value = this.pointless_checkbox_value ?? Math.sin((i / 5) ** 2) > 0;
-                            return this.pointless_checkbox_value;
-                        },
-                        toggle: function () { this.pointless_checkbox_value = !this.pointless_checkbox_value; }
-                    },
-                    shortcut: `Ctrl+${i}`,
-                })),
-                description: "Contains lots of items.",
-            },
-        ],
+       
     };
 
     const $app_window_2 = new $Window({ title: "Explorer", resizable: true });
