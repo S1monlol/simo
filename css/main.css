@@ -1,0 +1,74 @@
+@font-face {
+    font-family: blockText;
+    src: url(FFFFORWA.ttf);
+}
+
+body{
+
+    background-color: #008080;
+
+}
+
+#simo {
+
+
+
+    position: fixed;
+
+    z-index: 0;
+
+}
+
+
+#simoheader{
+
+
+    position: relative;
+
+    z-index: 0;
+
+}
+
+#box{
+
+    position: relative;
+
+    bottom: 350px;
+
+    right: 110px;
+
+    width: 300px;
+
+    z-index: 10;
+
+}
+
+
+#textBox{
+
+    word-wrap: break-word;
+
+    position: relative;
+
+    bottom: 560px;
+
+    right: 70px;
+
+    width: 220px;
+
+    height: 125px;
+
+    // background: black;
+
+}
+
+
+#text{
+
+    color: black;
+
+    font-size: 22px;
+
+    font-family: blockText;
+
+}
