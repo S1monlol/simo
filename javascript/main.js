@@ -7,7 +7,7 @@ dragElement(document.getElementById("simo"));
 
 welcome();
 
-async function welcome(){
+async function welcome() {
 
     // await sleep(1000);
 
@@ -19,7 +19,7 @@ async function welcome(){
                     const $w = $Window({ title: "Warning", resizable: false, maximizeButton: false, minimizeButton: false });
                     $w.$content.html("<p>Warning: Pillow is currently broken, I have no intent to fix it. Ive moved on from web proxies. Feel free to check out my other projects</p>");
                     $w.$Button("OK", () => $w.close()).focus().css({ width: 100 });
-                    
+
                     // window.location.href = "https://pillow.simo.ng";
                 },
                 shortcut: "pillow.simo.ng",
@@ -28,10 +28,17 @@ async function welcome(){
             {
                 item: "&Imdb but based",
                 action: () => {
-                    // redirect to pillow.ninja
-                    window.location.href = "https://imdb.simo.ng";
+                    const $w = $Window({ title: "Imdb But Based", resizable: false, maximizeButton: true, minimizeButton: true });
+                    $w.$content.html(`<p>This is my frontend for IMDB that uses the OMDb API</p> 
+                    <a href="https://github.com/S1monlol/Imdb-but-based">https://github.com/S1monlol/Imdb-but-based</a>
+                    <br>
+                    <iframe src="https://imdb.simo.ng/?search=doctor+strange" width="800" height="400" frameborder="0" allowfullscreen>
+                    <!-- Content to display if the browser does not support iframes -->
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+                <br>`);
+                    $w.$Button("OK", () => $w.close()).focus().css({ width: 100 });
                 },
-                shortcut: "imdb.simo.ng",
                 description: "Another simplified imdb frontend",
             },
 
@@ -59,7 +66,7 @@ async function welcome(){
                                 minimizeButton: false
                             });
                             $w.$content.html("<p>Abi-bot is a discord bot that gets information from the game <a href='https://store.steampowered.com/app/1306570/Fadeout_Underground/'>\"Fadeout Underground\"</a> </p> <img style='width: 500px' src='/image/abi.jpg'> <p>It was made in python and discord.py</p>");
-                            $w.$Button("OK", () => $w.close()).focus().css({width: 100});
+                            $w.$Button("OK", () => $w.close()).focus().css({ width: 100 });
                         },
                         description: "Abi-bot"
                     },
@@ -73,7 +80,7 @@ async function welcome(){
                                 minimizeButton: false
                             });
                             $w.$content.html("<p>A client hired me to make a bunch of crypto-tracking bots for personal use</p> <img style='width: 200px' src='/image/crypto1.jpg'> <img style='width: 200px' src='/image/crypto2.jpg'> <img style='width: 200px' src='/image/crypto3.jpg'> <p>I made them in python and discord.py</p>");
-                            $w.$Button("OK", () => $w.close()).focus().css({width: 100});
+                            $w.$Button("OK", () => $w.close()).focus().css({ width: 100 });
                         },
                         description: "Crypto Bots"
                     },
@@ -86,15 +93,16 @@ async function welcome(){
             {
                 item: "&Contact me",
                 action: () => {
-                    const $w = $Window({ title: "Contact me",
+                    const $w = $Window({
+                        title: "Contact me",
                         resizable: false,
                         maximizeButton: false,
                         minimizeButton: false
                     });
                     $w.$content.html("<p> For any inquiries, you can contact me via email at simon@simo.ng, or on discord at S1mon#0001</p>");
-                    $w.$Button("OK", () => $w.close()).focus().css({width: 100});
+                    $w.$Button("OK", () => $w.close()).focus().css({ width: 100 });
                 },
-                description: "Want to reach out?"    
+                description: "Want to reach out?"
             },
         ],
     };
@@ -150,7 +158,7 @@ function dragElement(elmnt) {
 
     let x = JSON.parse(localStorage.getItem('simo_pos'));
 
-    if(x != null){
+    if (x != null) {
 
         console.log(x);
 
@@ -190,7 +198,7 @@ function dragElement(elmnt) {
 
     function elementDrag(e) {
 
-        let pos = {'top': elmnt.style.top, 'left': elmnt.style.left};
+        let pos = { 'top': elmnt.style.top, 'left': elmnt.style.left };
 
         localStorage.setItem('simo_pos', JSON.stringify(pos));
         e = e || window.event;
