@@ -207,6 +207,39 @@ async function welcome() {
                 description: "A script to import canvas assignments into notion",
             },
             {
+                item: "&Echo",
+                action: () => {
+                    const $w = $Window({ title: "Echo", resizable: true, left: 500, maximizeButton: true, minimizeButton: true });
+                    $w.css({
+                        top: window.innerHeight / 2 - 400,
+                        left: window.innerWidth / 2 - 450
+                    })
+                    $w.$content.html(`
+                    <div class="github-widget" data-repo="S1monlol/echo"></div>
+                    <br>
+                    <div id="echo">
+                    <h1 style="margin:0;">Echo - An AI Assistant for your Discord Starship</h1>
+
+                    <p>Echo is designed to be an AI assistant for a made-up spaceship, providing education about humanity and psychological support for the crew.</p>
+                    
+                    <h2>Features</h2>
+                    
+                    <ul>
+                      <li>The bot is powered by OpenAI's GPT-3.5 language model, providing a conversational AI experience for the crew of the spaceship.</li>
+                      <li>The bot is designed to educate the crew about humanity and provide psychological support.</li>
+                      <li>The bot's context can be reset at any time by using the <code>resetcontext</code> slash command.</li>
+                    </ul>
+                    
+                    </div>
+                <br>`);
+                    $w.$Button("OK", () => $w.close()).focus().css({ width: 100 });
+
+                    github_update()
+
+                },
+                description: "A discord bot that makes your discord \"starship\" special",
+            },
+            {
                 item: "&Pillow",
                 action: () => {
                     const $w = $Window({ title: "Warning", resizable: false, maximizeButton: false, minimizeButton: false });
