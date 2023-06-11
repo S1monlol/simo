@@ -1,4 +1,0 @@
-<iframe src="https://imdb.simo.ng/?search=doctor+strange" width="800" height="400" frameborder="0" allowfullscreen>
-                    <!-- Content to display if the browser does not support iframes -->
-                    <p>Your browser does not support iframes.</p>
-                </iframe>

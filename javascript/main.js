@@ -118,7 +118,6 @@ welcome();
 async function welcome() {
 
     // await sleep(1000);
-
     const menus = {
         "&Projects": [
             {
@@ -179,6 +178,29 @@ async function welcome() {
 
                 },
                 description: "Another simplified imdb frontend",
+            },
+            {
+                item: "&AI stuff",
+                submenu: [
+                    {
+                        item: "&Proverb generator",
+                        action: () => {
+                            window.open("https://proverb.simo.ng", "_blank");
+
+                        },
+                        description: "A proverb generator based on GPT-3.5"
+                    },
+                    {
+                        item: "&Ai bookshelf",
+                        action: () => {
+                            window.open("https://book.simo.ng", "_blank");
+                                },
+                        description: "An AI based book recommender"
+                    },
+
+
+                ],
+                description: "Every project based on GPT-3.5 (Some of these are unstable)"
             },
             {
                 item: "&Notion Canvas",
@@ -327,7 +349,7 @@ async function welcome() {
                         maximizeButton: false,
                         minimizeButton: false
                     });
-                    $w.$content.html("<p> For any inquiries, you can contact me via email at simon@simo.ng, or on discord at S1mon#0001</p>");
+                    $w.$content.html("<p> For any inquiries, you can contact me via email at simon@simo.ng, or on discord at S1monlol</p>");
                     $w.$Button("OK", () => $w.close()).focus().css({ width: 100 });
                 },
                 description: "Want to reach out?"
